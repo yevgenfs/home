@@ -1,3 +1,0 @@
-C:/Users/yevhen.surkov/Documents/home/CMakeFiles/hello.dir
-C:/Users/yevhen.surkov/Documents/home/CMakeFiles/edit_cache.dir
-C:/Users/yevhen.surkov/Documents/home/CMakeFiles/rebuild_cache.dir

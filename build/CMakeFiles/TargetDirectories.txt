@@ -1,0 +1,7 @@
+C:/Users/yevhen.surkov/Documents/home/build/CMakeFiles/small_project_test.dir
+C:/Users/yevhen.surkov/Documents/home/build/CMakeFiles/install/local.dir
+C:/Users/yevhen.surkov/Documents/home/build/CMakeFiles/install.dir
+C:/Users/yevhen.surkov/Documents/home/build/CMakeFiles/edit_cache.dir
+C:/Users/yevhen.surkov/Documents/home/build/CMakeFiles/rebuild_cache.dir
+C:/Users/yevhen.surkov/Documents/home/build/CMakeFiles/list_install_components.dir
+C:/Users/yevhen.surkov/Documents/home/build/CMakeFiles/install/strip.dir

@@ -8,9 +8,9 @@ set(CMAKE_BUILD_TYPE Release)
 #Bring the headers, such as Student.h into the project
 include_directories(header)
   
-file(GLOB SOURCES "source/*.c")
+file(GLOB SOURCES  "C:/Users/yevhen.surkov/Documents/home/source/*.c")
 
-add_library(testStudent SHARED ${SOURCES})
+add_library(small_project_test SHARED ${SOURCES})
 
-install(TARGETS testStudent DESTINATION C:\Users\yevhen.surkov\Documents\home)
+install(TARGETS small_project_test DESTINATION C:/Users/yevhen.surkov/Documents/home)
 #add_executable(hello "C:/Users/yevhen.surkov/Documents/home/source/main.c")
