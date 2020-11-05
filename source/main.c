@@ -1,29 +1,29 @@
 // main.c 
 // folder home
 #include <stdio.h>
-#define MAXSIZE 10
+#include <stdlib.h>
  
 typedef struct
 {
 	// Initialize front and rear 
 	int rear, front;
- 
 	// Circular Queue 
 	int size;
 	int* arr;
- 
- 
 }Queue;
  
-Queue queue;
- 
-void create( Queue* q)
+void create( int s, Queue* q)
 {
 	q->front = -1;
 	q->rear = -1;
-	q->size = MAXSIZE;
-	int array[MAXSIZE];
-	q->arr = array;
+	q->size = s;
+	//maloc
+	int array[s];
+	if(((q->arr =(int*)malloc(sizeof(array)))) == NULL)
+	{
+		printf("Allocation error.");
+		exit(0);
+	}
 }
  
 /* Function to create Circular queue */
@@ -104,35 +104,67 @@ void displayQueue(Queue* q)
 			printf("%d ", *(q->arr + i));
 	}
 }
+
+void delete (Queue *q)
+{
+	free(q->arr);
+}
  
 /* Driver of the program */
 int main()
 {
 	Queue q;
 	Queue* pointer = &q;
- 
-	create(pointer);
+
+	Queue second_q;
+	Queue* second_pointer = &second_q;
+	//create
+	create(10, pointer);
+	create(10, second_pointer);
 	// Inserting elements in Circular Queue 
 	enQueue(14, pointer);
 	enQueue(22, pointer);
 	enQueue(13, pointer);
 	enQueue(-6, pointer);
+
+	enQueue(1, second_pointer);
+	enQueue(2, second_pointer);
+	enQueue(3, second_pointer);
+	enQueue(-4, second_pointer);
  
 	// Display elements present in Circular Queue 
 	displayQueue(pointer);
+	displayQueue(second_pointer);
  
 	// Deleting elements from Circular Queue 
 	printf("\nDeleted value = %d", deQueue(pointer));
 	printf("\nDeleted value = %d", deQueue(pointer));
- 
+	printf("\nDeleted value = %d", deQueue(second_pointer));
+	printf("\nDeleted value = %d", deQueue(second_pointer));
+
+    // Display elements present in Circular Queue 
 	displayQueue(pointer);
- 
+	displayQueue(second_pointer);
+
+	// Inserting elements in Circular Queue 
 	enQueue(9, pointer);
 	enQueue(20, pointer);
 	enQueue(5, pointer);
+
+	enQueue(11, second_pointer);
+	enQueue(12, second_pointer);
+	enQueue(13, second_pointer);
  
+	// Display elements present in Circular Queue 
 	displayQueue(pointer);
- 
-	enQueue(20, pointer);
+	displayQueue(second_pointer);
+
+	// test for full queue
+	enQueue(14, second_pointer);
+	enQueue(15, second_pointer);
+	enQueue(16, second_pointer);
+	enQueue(17, second_pointer);
+	enQueue(18, second_pointer);
+	enQueue(19, second_pointer);
 	return 0;
 }
